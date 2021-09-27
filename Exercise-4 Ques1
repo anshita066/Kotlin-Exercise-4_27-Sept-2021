@@ -1,0 +1,8 @@
+val simple_interest:(Float,Float,Int)-> Float  = { p, r, t -> (p*r*t)/100}
+ 
+fun main(args: Array<String>) {
+    val si = simple_interest(45000f,3.5f,2)
+    
+    println("The simple interest is: $si")
+ 
+}
