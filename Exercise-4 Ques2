@@ -1,14 +1,15 @@
- data class Employee(val name:String, val age:Int)
-
-    var employeeList= listOf(Employee("Anshita",24), 
-          		 		  Employee("Aashi",23), 
-				 		  Employee("Ritika",24),
-                          Employee("Sunidhi",23))
+data class Employee(val name: String, val age: Int)
+    val employeeList = listOf(
+        Employee("Anshita",24), 
+        Employee("Aashi",33), 
+	Employee("Ritika",24),
+        Employee("Sunidhi",53)
+    )
     
- 	var agePredicate:(Employee)->Boolean = {person:Employee ->person.age>30}
+ 	val agePredicate:(Employee) -> Boolean = {person:Employee -> person.age >30}
     
  fun main(){
-    val result= employeeList.filter(agePredicate)
+    val result = employeeList.filter(agePredicate)
      //print(result)
 	result.forEach{
         println("Name: ${it.name}, Age:${it.age}")
